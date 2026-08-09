@@ -1,0 +1,13 @@
+{
+  "name": "shalini-kushwaha-portfolio",
+  "version": "1.0.0",
+  "description": "Shalini Kushwaha — Technical Account Manager Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -c-1",
+    "start": "npx http-server . -p 3000 -c-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

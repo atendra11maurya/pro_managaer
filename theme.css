@@ -1,0 +1,22 @@
+/* Site-wide monochrome glass theme with a single blue accent. */
+:root{--ink:#151515;--muted:#686868;--cream:#fff;--paper:#f7f7f7;--accent:#1f81ff;--line:#e2e2e2}
+body{background:#fff;color:#151515}
+.hero-shell{background:#fff}
+.trust-strip{background:#151515;color:#fff}.trust-strip span{background:var(--accent)}
+.split-section,.experience-section,.approach-section{background:#fff}
+.expertise-section{background:#f7f7f7}
+.section-content p,.expertise-card p,.role p,.approach-list p{color:#666}
+.section-content h2,.section-heading h2,.expertise-card h3,.role h3,.approach-list h3{color:#151515}
+.expertise-grid,.timeline,.approach-list,.role,.approach-list li{border-color:#dedede}
+.expertise-card{border-color:#dedede;background:transparent}
+.role.role-no-date{grid-template-columns:1fr}
+.eyebrow,.expertise-card span,.approach-list>li>span,.role-company{color:var(--accent)!important}
+.contact-section{background:#393837}
+footer{background:#151515}
+.contact-section{border-top:1px solid #151515}.contact-section h2{color:#fff}.contact-section>div:first-child>p:last-child,footer{color:#bcbcbc}
+.contact-section .button-primary{background:var(--accent);color:#fff}.contact-section .text-link{color:#fff;border-color:rgba(255,255,255,.65)}
+.button-primary{background:var(--accent);box-shadow:0 8px 20px rgba(31,129,255,.22)}
+.button-secondary{border-color:#1d1d1d;color:#1d1d1d;background:#fff}
+.hero .button-secondary{border-color:rgba(255,255,255,.54);color:#fff;background:rgba(255,255,255,.03)}
+footer{border-color:rgba(255,255,255,.2)}
+@media(max-width:760px){.expertise-card{background:#f7f7f7}.button-secondary{color:#1d1d1d;background:#fff}}
