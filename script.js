@@ -4,13 +4,13 @@ const header = document.querySelector('.site-header');
 menuButton?.addEventListener('click', () => {
   const isOpen = header.classList.toggle('open');
   menuButton.setAttribute('aria-expanded', String(isOpen));
-  menuButton.textContent = isOpen ? 'Close' : 'Menu';
+  menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
 });
 
 document.querySelectorAll('nav a').forEach((link) => link.addEventListener('click', () => {
   header.classList.remove('open');
   menuButton?.setAttribute('aria-expanded', 'false');
-  if (menuButton) menuButton.textContent = 'Menu';
+  menuButton?.setAttribute('aria-label', 'Open navigation');
 }));
 
 const observer = new IntersectionObserver((entries) => {
