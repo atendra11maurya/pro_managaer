@@ -1,0 +1,334 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #151515;
+  --muted: #686868;
+  --cream: #ffffff;
+  --paper: #f7f7f7;
+  --accent: #1f81ff;
+  --line: #dedede;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #151515;
+  font-family: var(--sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================
+   HERO & SHELL STYLES
+   ========================================== */
+
+.hero-shell {
+  padding: 10px;
+  background: #ffffff;
+}
+
+.hero-glass {
+  max-width: 1320px;
+  min-height: auto;
+  padding: 46px;
+  margin: auto;
+  border: 1px solid rgba(20, 20, 20, 0.13);
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(242, 242, 242, 0.8));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 22px 56px rgba(0, 0, 0, 0.13);
+}
+
+.hero-glass::after {
+  display: none;
+}
+
+.hero-frame {
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid rgba(255, 255, 255, 0.96);
+  border-radius: 20px;
+  background: linear-gradient(100deg, rgba(42, 43, 43, 0.94) 0%, rgba(32, 31, 30, 0.9) 48%, rgba(22, 20, 19, 0.8) 100%);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.site-header {
+  position: absolute;
+  top: 18px;
+  left: 26px;
+  right: 26px;
+  z-index: 5;
+  height: 52px;
+  max-width: none;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 28px;
+  background: rgba(28, 29, 29, 0.57);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f5f5f5;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.brand i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(31, 129, 255, 0.8);
+}
+
+.site-header nav {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+}
+
+.site-header nav a {
+  font-size: 12px;
+  color: #ffffff !important;
+  opacity: 0.9;
+  text-decoration: none;
+  font-family: var(--sans);
+}
+
+.site-header .nav-cta {
+  padding: 9px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  color: #ffffff !important;
+}
+
+.section {
+  max-width: 1220px;
+  margin: auto;
+  padding: 112px 32px;
+}
+
+.hero.section {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  max-width: none;
+  padding: 96px 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  position: relative;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 3;
+  order: 1;
+  flex: 1 1 520px;
+  max-width: 630px;
+  padding: 20px 0 0 10px;
+  text-align: left;
+}
+
+/* Hero Title Typography Scaled to Fit Cleanly on Exactly 2 Lines */
+.hero h1 {
+  max-width: 700px !important;
+  margin: 0 !important;
+  font-family: "DM Sans", Arial, sans-serif !important;
+  font-size: clamp(36px, 4.2vw, 56px) !important;
+  font-weight: 600 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.025em !important;
+  color: #ffffff !important;
+}
+
+.hero-intro {
+  max-width: 570px;
+  margin: 24px 0 32px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(31, 129, 255, 0.22);
+}
+
+.button-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ==========================================
+   PHOTO GLASS AVATAR CONTAINER & HOVER (VERCEL 1:1)
+   ========================================== */
+
+.hero-photo-glass {
+  position: relative;
+  z-index: 3;
+  order: 2;
+  flex: 0 0 350px;
+  width: 350px;
+  height: 440px;
+  padding: 12px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.03) 100%);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), inset 0 -1px 1px rgba(0, 0, 0, 0.2), 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 35px rgba(31, 129, 255, 0.12);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-photo-glass:hover {
+  transform: translateY(-4px);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45), inset 0 -1px 1px rgba(0, 0, 0, 0.2), 0 28px 60px rgba(0, 0, 0, 0.5), 0 0 45px rgba(31, 129, 255, 0.22);
+}
+
+.photo-glass-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(160deg, #1b1a18 0%, #121110 100%);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+  filter: saturate(1.02) contrast(1.03) brightness(1.01);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-photo-glass:hover .hero-photo-img {
+  transform: scale(1.03);
+}
+
+/* ==========================================
+   INTERACTION MECHANICS & HOVER HIERARCHY
+   ========================================== */
+
+/* Level 1: Links & Nav Controls */
+.nav-pill-link {
+  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-pill-link:hover {
+  background-color: rgba(56, 189, 248, 0.16);
+  color: #60a5fa !important;
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.18);
+}
+
+/* Level 2: Utility Buttons */
+.utility-btn-hover {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease;
+}
+.utility-btn-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+/* Level 3: Interactive Content Cards */
+.interactive-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s ease,
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+}
+.interactive-card:hover {
+  transform: translateY(-5px);
+  background-color: #ffffff;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1);
+  border-color: rgba(15, 23, 42, 0.2);
+}
+
+/* Level 4: Hero Action Buttons (Radial Center-Outward Expansion) */
+.hero-radial-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  isolation: isolate;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+.hero-radial-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.85s cubic-bezier(0.16, 1, 0.3, 1), height 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+}
+.hero-radial-btn-primary::before {
+  background: linear-gradient(135deg, #1f81ff 0%, #0056cc 100%);
+}
+.hero-radial-btn-secondary::before {
+  background: rgba(255, 255, 255, 0.16);
+}
+.hero-radial-btn:hover::before {
+  width: 380%;
+  height: 380%;
+}
+.hero-radial-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(31, 129, 255, 0.35);
+}
