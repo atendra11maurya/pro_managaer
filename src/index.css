@@ -150,7 +150,6 @@ body {
   text-align: left;
 }
 
-/* Hero Title Typography Scaled to Fit Cleanly on Exactly 2 Lines */
 .hero h1 {
   max-width: 700px !important;
   margin: 0 !important;
@@ -331,4 +330,138 @@ body {
 .hero-radial-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(31, 129, 255, 0.35);
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES (VERCEL 1:1 MOBILE LAYOUT)
+   ========================================== */
+
+@media (max-width: 960px) {
+  .hero-shell {
+    padding: 0;
+  }
+  
+  .hero-glass {
+    padding: 12px;
+    border-radius: 0;
+    min-height: auto !important;
+  }
+  
+  .hero-frame {
+    height: auto !important;
+    min-height: auto !important;
+    border-width: 3px;
+    border-radius: 16px;
+  }
+  
+  .site-header {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    padding: 0 14px;
+  }
+  
+  .brand {
+    font-size: 12px;
+  }
+
+  /* On mobile/narrow screens: Image goes ABOVE hero copy text (below navbar) */
+  .hero.section {
+    padding: 78px 16px 28px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 24px !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  .hero-photo-glass {
+    order: 1 !important; /* Positioned BELOW navbar and ABOVE hero text */
+    flex: none !important;
+    width: 100% !important; /* Expands wider to cover screen width */
+    max-width: 100% !important;
+    height: 340px !important;
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+
+  .hero-photo-img {
+    object-position: center 18%;
+  }
+
+  .hero-copy {
+    order: 2 !important; /* Positioned BELOW photo glass frame */
+    flex: none !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    min-height: auto !important;
+  }
+
+  .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .hero-actions .button {
+    display: flex !important;
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero h1 {
+    font-size: 32px !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero-intro {
+    font-size: 13px !important;
+    margin: 16px 0 20px !important;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  .expertise-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .expertise-card {
+    min-height: 220px;
+    padding: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .role {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 24px 0;
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr !important;
+    padding: 60px 20px !important;
+  }
+
+  .contact-actions {
+    justify-content: flex-start !important;
+  }
+
+  footer {
+    padding: 22px 20px !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    text-align: left !important;
+  }
 }
