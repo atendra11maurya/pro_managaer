@@ -2,22 +2,22 @@ import React from 'react';
 
 const expertiseItems = [
   {
-    index: "01//",
+    index: "01// —",
     title: "Strategic account partnership",
     desc: "Building trusted relationships, understanding priorities, and helping customers get durable value from technology."
   },
   {
-    index: "02//",
+    index: "02// —",
     title: "Technical customer success",
     desc: "Translating product capability into practical outcomes through adoption, enablement, and thoughtful problem solving."
   },
   {
-    index: "03//",
+    index: "03// —",
     title: "Escalation leadership",
     desc: "Bringing structure to high-priority situations, coordinating stakeholders, and keeping communication clear and accountable."
   },
   {
-    index: "04//",
+    index: "04// —",
     title: "Cross-functional collaboration",
     desc: "Connecting customer insight with product, support, and engineering teams to improve the overall experience."
   }

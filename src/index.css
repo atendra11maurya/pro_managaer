@@ -314,6 +314,19 @@ body {
   line-height: 1;
 }
 
+/* Expertise is content-led: preserve the hover emphasis without shifting text out of view. */
+.expertise-card:hover {
+  transform: none;
+}
+
+/* iPad widths need two comfortable columns; four narrow cards wrap and clip during hover. */
+@media (min-width: 961px) and (max-width: 1200px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+}
+
 /* Level 4: Hero Action Buttons (Radial Center-Outward Expansion) */
 .hero-radial-btn {
   position: relative;
