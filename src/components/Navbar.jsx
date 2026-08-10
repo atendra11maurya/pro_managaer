@@ -24,6 +24,7 @@ export default function Navbar() {
         className="menu-button hidden max-[960px]:flex items-center justify-center p-2 rounded-lg text-white bg-transparent border-0 cursor-pointer"
         aria-label={isOpen ? 'Close navigation' : 'Open navigation'}
         aria-expanded={isOpen}
+        aria-controls="mobile-navigation"
       >
         <svg className="hamburger-icon w-[22px] h-[18px] fill-none" viewBox="0 0 22 18">
           <path
@@ -54,7 +55,7 @@ export default function Navbar() {
       </button>
 
       {/* Desktop Navigation */}
-      <nav className="flex items-center gap-[23px] max-[960px]:hidden" aria-label="Primary navigation">
+      <nav className="desktop-nav" aria-label="Primary navigation">
         <a
           href="#expertise"
           className="nav-pill-link text-[12px] text-white no-underline px-3.5 py-1.5 rounded-full border border-transparent font-medium hover:text-skyBlue"
@@ -78,7 +79,8 @@ export default function Navbar() {
       {/* Mobile Navigation Dropdown */}
       {isOpen && (
         <nav
-          className="flex min-[961px]:hidden absolute top-[65px] left-[20px] right-[20px] p-[20px] bg-[#28231f] border border-white/20 rounded-[16px] flex-col items-start gap-4 z-10"
+          id="mobile-navigation"
+          className="mobile-nav"
           aria-label="Mobile navigation"
         >
           <a
